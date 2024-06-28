@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body>
+<input id="numb">
+<button type="button" onclick="myFunction()">Submit</button>
+<p id="demo"></p>
+
+<script>
+  function myFunction() {
+   let x = document.getElementById("numb").value;
+  let text;
+function isPalindrome(str) {
+    let j = str.length - 1;
+    for (let i = 0; i < str.length / 2; i++) {
+        if (str[i] != str[j]) {
+            return false;
+        }
+        j--;
+    }
+    return true;
+}
+let result = x.toLowerCase();
+text = isPalindrome(result);
+document.getElementById("demo").innerHTML = text;
+  }
+</script>
+</body>
+</html> 

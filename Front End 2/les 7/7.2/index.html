@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+<input id="numb">
+<button type="button" onclick="myFunction()">Submit</button>
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+
+  let x = document.getElementById("numb").value;
+  let text;
+
+  function reverseString(str) {
+   
+    var newString = "";
+ 
+    for (var i = str.length - 1; i >= 0; i--) { 
+        newString += str[i];
+    }
+    return newString; 
+}
+text = reverseString(x);
+document.getElementById("demo").innerHTML = text;
+}
+</script>
+
+</body>
+</html> 

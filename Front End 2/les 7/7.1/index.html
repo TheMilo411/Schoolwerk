@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<input id="numb">
+<button type="button" onclick="myFunction()">Submit</button>
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+
+  let x = document.getElementById("numb").value;
+  let text;
+  if (isNaN(x)) {
+    text = "Input not valid";
+  } else if(x <= 4) {
+    text = "Too low!";
+  } else if(x >= 6) {
+    text = "Too high!"
+  }
+  else {
+    text = "You win!"
+  }
+  document.getElementById("demo").innerHTML = text;
+}
+</script>
+
+</body>
+</html> 

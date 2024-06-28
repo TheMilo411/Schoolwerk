@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    list-style: none;
+}
+
+body{
+    display: flex;
+    justify-content: space-around
+}
+.inputcard {
+    gap: 50px;
+    border: 1px black solid ;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin: 50px;
+    width: 300px;
+    height: 500px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.InputHeader {
+    padding-top: 25px;
+}
+
+.wachtwoordcard {
+    border: 1px black solid ;
+    margin: 50px;
+    width: 300px;
+    height: 400px;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    justify-content: space-between;
+    display: none;
+
+}
+
+.inputbody {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 50px;
+}
+
+.gebruiker {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px;
+}
+
+.gebruikers {
+    padding: 0;
+    width: 100%;
+    overflow: scroll;
+    height: 90%;
+
+}
+
+.gebruikerbutton {
+    display: flex;
+}
+
+.toevoegenbutton {
+    background-color: aqua;
+    width: 125px;
+    height: 50px;
+    border-radius: 10px;
+}
+
+.showbutton {
+    background-color: aqua;
+    width: 50px;
+    height: 20px;
+    border-radius: 5px;
+    font-size: xx-small;
+    display: flex;
+    justify-content: center;
+}
+
+.destroybutton {
+    background-color: red;
+    width: 45px;
+    height: 20px;
+    border-radius: 5px;
+    font-size: xx-small;
+    display: flex;
+    justify-content: center;
+
+}
+
+.wachtwoord {
+    display: none;
+}
+
+.placeholder {
+    display: block;
+}
+
+.showallbutton {
+    height: 50px;
+    width: 100px;
+    background-color: aqua;
+    border-radius: 5px;
+    margin: 30px;
+    
+}
+
+.fab{
+position: absolute;
+bottom: 50px;
+right: 50px;
+height: 100px;
+width: 100px;
+border-radius: 15%;
+font-size: 300%;
+border: 5px solid ;
+color: black;
+
+background: orangered;
+box-shadow: 0 5px 5px rgba(0,0,0,0.2);
+}
+
+@media screen and (max-width: 700px) {
+    .fab {
+        height: 60px;
+        width: 60px;
+        bottom: 20px;
+        right: 20px;
+        font-size: 150%;
+    }
+    
+}

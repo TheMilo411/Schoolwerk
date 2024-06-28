@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eindopracht</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+</head>
+
+<body>
+    <section class="inputcard" id="js__inputcard">
+        <header class="InputHeader">
+            <h1>Safteylock</h1>
+        </header>
+
+        <div class="inputbody">
+            <div class="naambody">
+                <h2>URL / naam</h2>
+                <input type="text" placeholder="Enter a username"  id="js__naam" required>
+    
+            </div>
+
+            <div class="wachtwoordbody">
+                <h2>Wachtwoord</h2>
+                <input type="password" placeholder="Enter a password" id="js__password" required >
+            </div>
+        
+            <input type="button" value="Toevoegen" id="js__input" class="toevoegenbutton" >
+
+        </div>
+    </section>
+
+
+    <section class="wachtwoordcard" id="js__wachtwoordcard">
+        <ul class="gebruikers" id="js__wachtwoorden">
+            <li class="gebruiker" data-running="false">
+                <div class="information">
+                    <h2>Test</h2>
+                    <p class="wachtwoord" >Bootlicker</p>
+                    <p class="placeholder" >................</p>
+                </div>
+                <div class="gebruikerbutton">
+                    <input type="button" class="showbutton" value="show">
+                    <input type="button" value="Verwijder" class="destroybutton">
+                </div>
+            </li>
+        </ul>
+        <input type="button" class="showallbutton" id="js__showall" value="Show all">
+
+
+    </section>
+    <button id="js--fab" class="fab" > <-> </button>
+
+</body>
+
+</html>

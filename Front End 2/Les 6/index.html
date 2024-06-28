@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alarmclock</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/main.js" defer></script>
+    <script src="https://kit.fontawesome.com/8b21c7cd2e.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <dialogue id="js--dialogue"class="dialogue"></dialogue>
+    <article class="alarm">
+        <header class="alarm__top">
+            <input tabindex="1" class="alarm__toggle"  type="checkbox" name="" id="js__toggle" value="">
+            <h1  class="alarm__heading">
+                <span id="js--time-hour">00</span>
+                <span>:</span>
+                <span id="js--time-minute">00</span>
+            </h1>
+        </header>
+        <section class="alarm__bottom">
+            <div class="alarm__wrapper">
+            <button id="js--hour-up" class="alarm__button"><i class="fa-solid fa-chevron-up"></i></button>
+            <button id="js--hour-down" class="alarm__button"><i class="fa-solid fa-chevron-down"></i></button>
+        </div>
+        <div class="alarm__wrapper">
+            <button id="js--minute-up" class="alarm__button"><i class="fa-solid fa-chevron-up"></i></button>
+            <button id="js--minute-down"class="alarm__button"><i class="fa-solid fa-chevron-down"></i></button>
+        </div>
+        </section>
+    </article>
+</body>
+</html>
