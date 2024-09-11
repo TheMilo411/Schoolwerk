@@ -1,0 +1,120 @@
+DROP DATABASE carbase;
+CREATE DATABASE carbase;
+USE carbase;
+
+CREATE TABLE status(
+	naam VARCHAR(255) PRIMARY KEY
+);
+
+CREATE TABLE medewerker(
+    id int PRIMARY KEY AUTO_INCREMENT,
+	Voornaam VARCHAR(255) NOT NULL,
+    Achternaam VARCHAR(255) NOT NULL,
+    Leeftijd INT NOT NULL, 
+    Salaris FLOAT NOT NULL DEFAULT(2500),
+    Functie ENUM("Monteur", "Sr. Monteur", "Verkoper", "Sr. Verkoper", "Belastingadviseur") NOT NULL DEFAULT("Monteur")
+
+);
+
+CREATE TABLE auto (
+	Merk VARCHAR(255) NOT NULL,
+    Versie VARCHAR(255) ,
+    Kenteken VARCHAR(255) PRIMARY KEY,
+    Kleur VARCHAR(255) NOT NULL,
+    Extra VARCHAR(255) DEFAULT("Geen extra's"),
+    Status VARCHAR(255),
+    FOREIGN KEY FK_Status (Status) REFERENCES status(Naam) 
+);
+
+CREATE TABLE product (
+	Naam VARCHAR(255) NOT NULL,
+    Code INT PRIMARY KEY AUTO_INCREMENT,
+    Prijs FLOAT NOT NULL,
+    Beschrijving TEXT DEFAULT("Geen beschrijving")
+    );
+   
+CREATE TABLE facturen (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    Kenteken VARCHAR(255),
+    FOREIGN KEY FK_Kenteken (Kenteken) REFERENCES auto(Kenteken),
+    prijs FLOAT
+    );
+
+insert into status(naam)
+values("Verkopen");
+
+insert into status(naam)
+values("Repareren");
+
+insert into status(naam)
+values("Verkocht");
+    
+insert into status(naam)
+values("Lease");
+
+insert into medewerker(Voornaam, Achternaam, Leeftijd, Salaris, Functie)
+VALUES("Jeroen", "Rijst", 30, 3500, "Monteur");
+
+insert into medewerker(Voornaam, Achternaam, Leeftijd, Salaris, Functie)
+VALUES("Laura", "deVries", 25, 3700, "Sr. Verkoper");
+
+insert into medewerker(Voornaam, Achternaam, Leeftijd, Salaris, Functie)
+VALUES("Mo", "Desert", 22, 4000, "Sr. Monteur");
+     
+insert into medewerker(Voornaam, Achternaam, Leeftijd, Salaris, Functie)
+VALUES("Fred", "Kieskeurig", 45, 3500, "Belastingadviseur");
+
+insert into medewerker(Voornaam, Achternaam, Leeftijd, Salaris, Functie)
+VALUES("Mohammed", "Gelt", 36, 3500, "Verkoper");
+
+insert into medewerker(Voornaam, Achternaam, Leeftijd, Salaris, Functie)
+VALUES("Jeroen", "van het Eiland", 41, 4150, "Sr. Monteur");
+
+insert into auto(Merk, Versie, Kenteken, Kleur, Extra, status)
+VALUES("Fiat", "Panda", "19INKM", "Wit", "Cruise Control", "Verkocht");
+
+insert into auto(Merk, Versie, Kenteken, Kleur, Extra, status)
+VALUES("Mercedes", "Benz", "78UUMZ", "Rood", "Cruise Control", "Repareren");
+
+insert into auto(Merk, Versie, Kenteken, Kleur, Extra, status)
+VALUES("Tesla", "Pro", "JJ886nn", "Zwart", "Elektrisch", "Verkocht");
+
+insert into auto(Merk, Versie, Kenteken, Kleur, Extra, status)
+VALUES("Rolce Roys", null, "YYNZ88", "Geel", "Oldtimer", "Verkopen");
+    
+insert into auto(Merk, Versie, Kenteken, Kleur, status)
+VALUES("Citroen C4", "Cactus", "23NI80", "Wit", "Lease");
+    
+insert into auto(Merk, Versie, Kenteken, Kleur, status)
+VALUES("Citroen C4", "Cactus", "67HJMK", "Zwart", "Lease");
+    
+insert into auto(Merk, Versie, Kenteken, Kleur, Extra, status)
+   VALUES("BMW", "525 5-serie", "5595ZZ", "Zwart", "Nieuwe Velgen, APK tot 2025","Verkocht");
+
+insert into product(Naam, Code, Prijs, Beschrijving)
+VALUES("Ruitenwissers", 1, 20.99, "Ruitewissers voor alle auto's");
+
+insert into product(Naam, Code, Prijs, Beschrijving)
+VALUES("Koelvloeistof", 2, 15.99, "Per liter, vloeistof voor koeling motor");
+
+insert into product(Naam, Code, Prijs, Beschrijving)
+VALUES("Schoonmaakspullen", 3, 10.99, "Schoonmaakset voor auto");
+
+insert into product(Naam, Code, Prijs, Beschrijving)
+VALUES("Noodspullen", 4, 20.99, "Gevarendriehoek, raam intikker, opvallend hesje");
+
+insert into product(Naam, Code, Prijs, Beschrijving)
+VALUES("EHBO-doos", 5, 13.99, "EHBO-doos voor in de auto");
+
+insert into product(Naam, prijs, beschrijving)
+VALUES("Sneeuwketting", 29.99, "Sneeuwketting voor auto's");
+    
+insert into facturen(kenteken, Prijs)
+VALUES("JJ886NN", "22510");
+    
+insert into facturen(kenteken, Prijs)
+VALUES("5595ZZ", "6000");
+    
+insert into facturen(kenteken, Prijs)
+VALUES("19INKM", "2200");
+    
