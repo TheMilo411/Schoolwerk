@@ -1,0 +1,238 @@
+*{
+  margin: 0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+.footer  {
+  height: 50px;
+  background: darkcyan;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+  .footer p {
+    margin: 0;
+    padding: 0 40px;
+  }
+
+  nav {
+    background: darkcyan;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    position: fixed;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    height: 50px;
+  }
+
+  #cover {
+    height: 500px;
+    width: 500px;
+  }
+
+  a, a:visited, a:active{
+    color: white;
+    text-decoration: none;
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    gap: 0;
+    list-style: none;
+    justify-content: flex-end;
+    gap: 20px;
+  }
+
+
+
+
+.li-logo a{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.li-logo i {
+  font-size: 300%;
+}
+
+.homepage {
+  margin-top: 500px;
+ height: calc(100vh - 50px);
+ display: flex;
+align-items: center;
+justify-content: center;
+
+}
+
+
+article {
+  width: 45vw;
+  margin: 0 auto;
+  background: white;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-bottom: 50px;
+  margin-top: 200px;
+}
+
+.cards {
+  display: flex;
+  flex-direction: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 40px;
+  animation-name: popup;
+  animation-duration: 1s;
+  margin-top: 70px;
+}
+
+.card {
+  list-style: none;
+  width: 400px;
+  aspect-ratio: 1/1.6;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+
+}
+
+.card:nth-of-type(2) {
+  animation-delay: 0.2s;
+  animation-fill-mode: backwards;
+}
+
+.card header {
+  height: 55%;
+  display: flex;
+  align-items: flex-end;
+  border: 0.5px solid rgba(214, 214, 214, 0.4);
+}
+
+.card section{
+  height: 35%;
+  padding: 20px;
+  border-bottom: 0.5px solid rgba(214, 214, 214, 0.4);
+  border-left: 0.5px solid rgba(214, 214, 214, 0.4);
+  border-right: 0.5px solid rgba(214, 214, 214, 0.4);
+  
+}
+
+
+
+.card footer {
+  height: 10%;
+  padding: 20px;
+  color: black;
+  border-bottom: 0.5px solid rgba(214, 214, 214, 0.4);
+  border-left: 0.5px solid rgba(214, 214, 214, 0.4);
+  border-right: 0.5px solid rgba(214, 214, 214, 0.4);
+}
+
+.card footer a{
+  color: blue;
+}
+
+.tiles {
+  background-color: black;
+  border: white;
+}
+
+.site-tiles {
+  height: 50%;
+  width: 100%;
+  
+}
+
+form {
+  list-style: none;
+  width: 400px;
+  height: 400px;
+  aspect-ratio: 1/1.6;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+}
+
+input, textarea {
+  font-size: 100%;
+  font-family: 'Courier New', Courier, monospace;
+  padding: 5px;
+
+}
+
+input[type="submit"] {
+  background: black;
+  border: none;
+  width: 200px;
+  color: white;
+
+
+}
+
+input[type="submit"]:hover {
+  cursor: pointer;
+}
+
+form h2{
+  font-size: 180%;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 400;
+}
+textarea {
+  height: 200px;
+  resize: none;
+}
+
+form div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.header--ChronoTrigger {
+  background: url(img/Chronotrigger.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.header--DW2 {
+  background: url(img/dynastywarriors2.png);
+  background-position: center;
+  background-size: cover;
+}
+.header--Thief1 {
+  background: url(img/Thief1cover.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.header--SC2 {
+  background: url(img/Starcontrol2cover.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+@keyframes popup {
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity:1;
+  }
+}
